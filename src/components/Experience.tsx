@@ -6,8 +6,8 @@ export default function Experience() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section className="relative py-16 md:py-24 bg-dark overflow-hidden">
-      <div className="max-w-5xl mx-auto px-6 md:px-10 text-center relative z-10">
+    <section className="relative py-24 bg-dark overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 text-center relative z-10">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}

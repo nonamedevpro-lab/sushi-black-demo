@@ -54,7 +54,7 @@ export default function Navbar() {
               href="https://wa.me/994708082888"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-[#D4AF37] text-black font-semibold px-5 py-2 rounded-full hover:bg-[#c9a227] transition-colors whitespace-nowrap"
+              className="inline-flex items-center justify-center gap-2 bg-[#D4AF37] text-black font-semibold px-8 py-4 rounded-full hover:bg-[#c9a227] transition-colors whitespace-nowrap"
             >
               Sifariş Ver
             </a>
@@ -94,7 +94,7 @@ export default function Navbar() {
                 href="https://wa.me/994708082888"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[#D4AF37] text-black font-semibold px-5 py-2 rounded-full hover:bg-[#c9a227] transition-colors w-full text-center"
+                className="inline-flex items-center justify-center gap-2 bg-[#D4AF37] text-black font-semibold px-8 py-4 rounded-full hover:bg-[#c9a227] transition-colors w-full text-center"
               >
                 Sifariş Ver
               </a>

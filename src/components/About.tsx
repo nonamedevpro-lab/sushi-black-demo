@@ -13,7 +13,7 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="about" className="py-16 md:py-24 bg-dark">
+    <section id="about" className="py-24 bg-dark">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div ref={ref} className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left - Text */}

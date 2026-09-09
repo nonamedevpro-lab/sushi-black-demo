@@ -73,7 +73,7 @@ export default function MenuSection() {
   const isTitleInView = useInView(titleRef, { once: true, margin: '-100px' });
 
   return (
-    <section id="menu" className="py-16 md:py-24 pb-24 bg-dark">
+    <section id="menu" className="py-24 bg-dark">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         {/* Section Title */}
         <motion.div

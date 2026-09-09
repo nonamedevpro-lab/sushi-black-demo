@@ -34,7 +34,7 @@ export default function Contact() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="contact" className="py-16 md:py-24 bg-dark">
+    <section id="contact" className="py-24 bg-dark">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         {/* Section Title */}
         <motion.div
