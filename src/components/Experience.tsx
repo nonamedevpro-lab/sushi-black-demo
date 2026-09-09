@@ -6,14 +6,8 @@ export default function Experience() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section className="relative py-24 md:py-32 bg-dark overflow-hidden">
-      {/* Background subtle pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-gold/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gold/20 rounded-full blur-3xl" />
-      </div>
-
-      <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center relative z-10">
+    <section className="relative py-16 md:py-24 bg-dark overflow-hidden">
+      <div className="max-w-5xl mx-auto px-6 md:px-10 text-center relative z-10">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
@@ -29,7 +23,7 @@ export default function Experience() {
           />
 
           <blockquote className="font-serif text-3xl md:text-5xl lg:text-6xl text-gold italic leading-tight mb-8">
-            "Hər roll bir sənət əsəridir"
+            &ldquo;Hər roll bir sənət əsəridir&rdquo;
           </blockquote>
 
           {/* Decorative bottom line */}

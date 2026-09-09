@@ -16,7 +16,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+      <div className="relative z-10 text-center px-6 md:px-10 max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -49,11 +49,11 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.1 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="flex flex-wrap items-center justify-center gap-4 mt-10"
         >
           <a
             href="#menu"
-            className="bg-gold text-dark px-8 py-4 rounded-full font-semibold text-sm hover:bg-gold-light transition-all duration-300 hover:shadow-xl hover:shadow-gold/20 hover:-translate-y-0.5"
+            className="inline-flex items-center justify-center gap-2 bg-[#D4AF37] text-black font-semibold px-8 py-4 rounded-full hover:bg-[#c9a227] transition-colors min-h-[48px]"
           >
             Menyuya Bax
           </a>
@@ -61,7 +61,7 @@ export default function Hero() {
             href="https://wa.me/994708082888"
             target="_blank"
             rel="noopener noreferrer"
-            className="border border-warm-white/30 text-warm-white px-8 py-4 rounded-full font-semibold text-sm hover:border-gold hover:text-gold transition-all duration-300 hover:-translate-y-0.5"
+            className="inline-flex items-center justify-center gap-2 border border-[#D4AF37]/60 text-[#D4AF37] px-8 py-4 rounded-full hover:bg-[#D4AF37]/10 transition-colors min-h-[48px]"
           >
             WhatsApp Sifariş
           </a>

@@ -34,8 +34,8 @@ export default function Contact() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-dark">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="contact" className="py-16 md:py-24 bg-dark">
+      <div className="max-w-7xl mx-auto px-6 md:px-10">
         {/* Section Title */}
         <motion.div
           ref={ref}
@@ -53,7 +53,7 @@ export default function Contact() {
           <div className="w-16 h-px bg-gold/40 mx-auto mt-6" />
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
+        <div className="grid lg:grid-cols-2 gap-12">
           {/* Left - Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -69,8 +69,8 @@ export default function Contact() {
                   transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
                   className="flex items-start gap-4 group"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center flex-shrink-0 group-hover:bg-gold/20 transition-colors duration-300">
-                    <item.icon size={20} className="text-gold" />
+                  <div className="w-12 h-12 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#D4AF37]/20 transition-colors duration-300">
+                    <item.icon size={20} className="text-[#D4AF37]" />
                   </div>
                   <div>
                     <p className="text-warm-white/40 text-xs uppercase tracking-wider mb-1">
@@ -100,31 +100,26 @@ export default function Contact() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <div className="bg-surface rounded-2xl p-8 md:p-10 border border-warm-white/5 relative overflow-hidden">
-              {/* Background glow */}
-              <div className="absolute top-0 right-0 w-40 h-40 bg-gold/5 rounded-full blur-3xl" />
-              
-              <div className="relative z-10">
-                <div className="w-16 h-16 rounded-2xl bg-gold/10 flex items-center justify-center mb-6">
-                  <MessageCircle size={28} className="text-gold" />
-                </div>
-                <h3 className="font-serif text-2xl md:text-3xl font-bold text-warm-white mb-3">
-                  Sifariş Ver
-                </h3>
-                <p className="text-warm-white/50 mb-8 leading-relaxed">
-                  WhatsApp üzərindən birbaşa sifariş verin. 
-                  Komandamız sizə ən qısa zamanda cavab verəcək.
-                </p>
-                <a
-                  href="https://wa.me/994708082888"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 bg-gold text-dark px-8 py-4 rounded-full font-semibold text-sm hover:bg-gold-light transition-all duration-300 hover:shadow-xl hover:shadow-gold/20 hover:-translate-y-0.5"
-                >
-                  <MessageCircle size={18} />
-                  WhatsApp ilə Sifariş Ver
-                </a>
+            <div className="p-8 rounded-2xl border border-white/10 bg-[#141414]">
+              <div className="w-16 h-16 rounded-2xl bg-[#D4AF37]/10 flex items-center justify-center mb-6">
+                <MessageCircle size={28} className="text-[#D4AF37]" />
               </div>
+              <h3 className="font-serif text-2xl md:text-3xl font-bold text-warm-white mb-3">
+                Sifariş Ver
+              </h3>
+              <p className="text-warm-white/50 mb-8 leading-relaxed">
+                WhatsApp üzərindən birbaşa sifariş verin. 
+                Komandamız sizə ən qısa zamanda cavab verəcək.
+              </p>
+              <a
+                href="https://wa.me/994708082888"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-3 bg-[#D4AF37] text-black font-semibold px-8 py-4 rounded-full hover:bg-[#c9a227] transition-colors"
+              >
+                <MessageCircle size={20} />
+                WhatsApp ilə Sifariş Ver
+              </a>
             </div>
           </motion.div>
         </div>

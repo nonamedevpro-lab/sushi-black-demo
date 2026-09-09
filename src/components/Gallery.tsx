@@ -3,34 +3,28 @@ import { useRef } from 'react';
 
 const galleryImages = [
   {
-    src: 'https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=800&q=80&auto=format',
+    src: 'https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?auto=format&fit=crop&w=1200&q=80',
     alt: 'Sushi platter',
-    span: 'md:col-span-2 md:row-span-2',
   },
   {
-    src: 'https://images.unsplash.com/photo-1563612116625-3012372fccce?w=600&q=80&auto=format',
+    src: 'https://images.unsplash.com/photo-1563612116625-3012372fccce?auto=format&fit=crop&w=1200&q=80',
     alt: 'Nigiri selection',
-    span: '',
   },
   {
-    src: 'https://images.unsplash.com/photo-1558985250-27a406d446f5?w=600&q=80&auto=format',
+    src: 'https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=1200&q=80',
     alt: 'Sushi rolls close-up',
-    span: '',
   },
   {
-    src: 'https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=600&q=80&auto=format',
+    src: 'https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?auto=format&fit=crop&w=1200&q=80',
     alt: 'Chef preparing sushi',
-    span: '',
   },
   {
-    src: 'https://images.unsplash.com/photo-1562802378-063ec186a8e9?w=600&q=80&auto=format',
+    src: 'https://images.unsplash.com/photo-1562802378-063ec186a8e9?auto=format&fit=crop&w=1200&q=80',
     alt: 'Salmon sushi',
-    span: '',
   },
   {
-    src: 'https://images.unsplash.com/photo-1553621042-f6e147245754?w=600&q=80&auto=format',
+    src: 'https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=1200&q=80',
     alt: 'Sushi set',
-    span: 'md:col-span-2',
   },
 ];
 
@@ -39,8 +33,8 @@ export default function Gallery() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="gallery" className="py-24 md:py-32 bg-surface">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="gallery" className="pt-24 pb-16 md:py-24 bg-surface">
+      <div className="max-w-7xl mx-auto px-6 md:px-10">
         {/* Section Title */}
         <motion.div
           ref={ref}
@@ -59,22 +53,20 @@ export default function Gallery() {
         </motion.div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {galleryImages.map((img, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className={`relative overflow-hidden rounded-xl group cursor-pointer ${img.span}`}
+              className="relative overflow-hidden rounded-2xl group cursor-pointer"
             >
               <img
                 src={img.src}
                 alt={img.alt}
-                className="w-full h-full min-h-[200px] object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
+                className="w-full h-72 object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-dark/20 group-hover:bg-transparent transition-all duration-500" />
-              <div className="absolute inset-0 border border-gold/0 group-hover:border-gold/30 rounded-xl transition-all duration-500" />
             </motion.div>
           ))}
         </div>

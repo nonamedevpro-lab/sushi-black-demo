@@ -13,9 +13,9 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="about" className="py-24 md:py-32 bg-dark">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div ref={ref} className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+    <section id="about" className="py-16 md:py-24 bg-dark">
+      <div className="max-w-7xl mx-auto px-6 md:px-10">
+        <div ref={ref} className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left - Text */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -41,13 +41,14 @@ export default function About() {
             </p>
 
             {/* Stats */}
-            <div className="flex gap-8">
+            <div className="flex flex-wrap gap-10">
               {stats.map((stat, i) => (
                 <motion.div
                   key={stat.label}
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.3 + i * 0.15 }}
+                  className="whitespace-nowrap"
                 >
                   <div className="font-serif text-3xl font-bold text-gold mb-1">{stat.value}</div>
                   <div className="text-warm-white/50 text-sm">{stat.label}</div>
@@ -71,10 +72,8 @@ export default function About() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-dark/30 to-transparent" />
             </div>
-            {/* Gold frame offset */}
-            <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-gold/30 rounded-2xl -z-10" />
-            {/* Gold glow */}
-            <div className="absolute -top-6 -left-6 w-24 h-24 bg-gold/10 rounded-full blur-2xl" />
+            {/* Gold frame offset — non-overlapping, placed behind */}
+            <div className="absolute top-4 left-4 w-full h-full border-2 border-gold/30 rounded-2xl -z-10" />
           </motion.div>
         </div>
       </div>

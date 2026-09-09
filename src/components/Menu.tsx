@@ -73,8 +73,8 @@ export default function MenuSection() {
   const isTitleInView = useInView(titleRef, { once: true, margin: '-100px' });
 
   return (
-    <section id="menu" className="py-24 md:py-32 bg-dark">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="menu" className="py-16 md:py-24 pb-24 bg-dark">
+      <div className="max-w-7xl mx-auto px-6 md:px-10">
         {/* Section Title */}
         <motion.div
           ref={titleRef}
@@ -104,13 +104,13 @@ export default function MenuSection() {
           initial={{ opacity: 0 }}
           animate={isTitleInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-center mt-14"
+          className="text-center mt-12"
         >
           <a
             href="https://wa.me/994708082888"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block border border-gold/50 text-gold px-10 py-4 rounded-full font-semibold text-sm hover:bg-gold hover:text-dark transition-all duration-300 hover:shadow-lg hover:shadow-gold/20"
+            className="inline-flex items-center justify-center gap-2 border border-[#D4AF37]/60 text-[#D4AF37] px-8 py-4 rounded-full hover:bg-[#D4AF37]/10 transition-colors font-semibold text-sm"
           >
             Tam Menyu
           </a>

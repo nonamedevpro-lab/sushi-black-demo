@@ -29,10 +29,10 @@ export default function Navbar() {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
+          <a href="#" className="flex items-center gap-2 group shrink-0">
             <span className="font-serif text-2xl font-bold text-warm-white tracking-wide group-hover:text-gold transition-colors duration-300">
               SUSHI BLACK
             </span>
@@ -54,7 +54,7 @@ export default function Navbar() {
               href="https://wa.me/994708082888"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gold text-dark px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-gold-light transition-all duration-300 hover:shadow-lg hover:shadow-gold/20"
+              className="inline-flex items-center justify-center gap-2 bg-[#D4AF37] text-black font-semibold px-5 py-2 rounded-full hover:bg-[#c9a227] transition-colors whitespace-nowrap"
             >
               Sifariş Ver
             </a>
@@ -79,7 +79,7 @@ export default function Navbar() {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-surface/95 backdrop-blur-xl border-t border-gold/10"
           >
-            <div className="px-6 py-6 space-y-4">
+            <div className="px-6 md:px-10 py-6 space-y-4">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
@@ -94,7 +94,7 @@ export default function Navbar() {
                 href="https://wa.me/994708082888"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-center bg-gold text-dark px-6 py-3 rounded-full text-sm font-semibold hover:bg-gold-light transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 bg-[#D4AF37] text-black font-semibold px-5 py-2 rounded-full hover:bg-[#c9a227] transition-colors w-full text-center"
               >
                 Sifariş Ver
               </a>
